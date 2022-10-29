@@ -1,6 +1,6 @@
-
 from typing import ClassVar
 from dataclasses import dataclass, asdict
+
 
 @dataclass
 class InfoMessage:
@@ -150,7 +150,7 @@ class Swimming(Training):
         )
 
 
-def read_package(workout_type: str, data: list[int]) -> Training:
+def read_package(workout_type: str, data: 'list[int]') -> Training:
     """Прочитать данные полученные от датчиков."""
     dict_training: dict[str, type[Training]] = {
         "SWM": Swimming,
