@@ -12,11 +12,11 @@ class InfoMessage:
     speed: float
     calories: float
     MESSAGE: ClassVar[str] = (
-            "Тип тренировки: {training_type}; "
-            "Длительность: {duration:.3f} ч.; "
-            "Дистанция: {distance:.3f} км; "
-            "Ср. скорость: {speed:.3f} км/ч; "
-            "Потрачено ккал: {calories:.3f}."
+        "Тип тренировки: {training_type}; "
+        "Длительность: {duration:.3f} ч.; "
+        "Дистанция: {distance:.3f} км; "
+        "Ср. скорость: {speed:.3f} км/ч; "
+        "Потрачено ккал: {calories:.3f}."
     )
 
     def get_message(self) -> str:
@@ -129,7 +129,7 @@ class Swimming(Training):
         duration: float,
         weight: float,
         length_pool: float,
-        count_pool: float,
+        count_pool: float
     ) -> None:
         super().__init__(action, duration, weight)
         self.length_pool = length_pool
