@@ -159,8 +159,9 @@ def read_package(workout_type: str, data: 'list[int]') -> Training:
     }
     if workout_type not in dict_training:
         raise ValueError(
-            f'Тренировка {workout_type} не найдена,'
-            f'возможно Вы имели ввиду одну из этих тренировок: {dict_training}'
+            f'Тренировка {workout_type} не найдена, '
+            'возможно Вы имели ввиду одну из этих тренировок: '
+            f'{dict_training.keys()}'
         )
     return dict_training[workout_type](*data)
 
